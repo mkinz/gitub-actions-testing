@@ -2,7 +2,7 @@ name: Actions Workflow Testing
 
 on:
   schedule:
-    - cron: "0/2 * * * *"
+    - cron: "* * * * *"
     - cron: "0/3 * * * *"
   #push:
   pull_request:
