@@ -1,0 +1,15 @@
+name: Matt
+age: 33
+address: "15 hideaway lane"
+active: true
+key:
+    key: value
+    key2:  33
+    key3:
+        key: 1
+        key2: "other value"
+
+array:
+    - item1
+    - item2
+    - {key: value}
