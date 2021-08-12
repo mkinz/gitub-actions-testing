@@ -16,14 +16,21 @@ jobs:
           echo "${{ github.token }}"
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Write file to pwd
-        run: echo $RANDOM > random.txt
       - name: List Files After Checkout
         run: |
           pwd
           ls -a
       - name: Add File to Repo
         run: |
+          git config --global user.email "my-bot@bot.com"
+          git config --global user.name "my-bot"
+          git fetch
+          git checkout master
+          git branch --set-upstream-to=origin/master
+          git pull
+          ls -a
+          echo $RANDOM > random.txt
+          ls -a
           git add -A
           git commit -m "add random to repo"
           git push
