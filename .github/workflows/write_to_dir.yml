@@ -1,5 +1,6 @@
 name: Write a File to Repo
-on: push
+
+on: [push]
 
 jobs:
   write-random-file-to-main:
