@@ -22,8 +22,8 @@ jobs:
           ls -a
       - name: Add File to Repo
         run: |
-          git config --global user.email "my-bot@bot.com"
-          git config --global user.name "my-bot"
+          git config --global user.email "matthew.kinzler@gmail.com"
+          git config --global user.name "mkinz"
           git fetch
           git checkout master
           git branch --set-upstream-to=origin/master
