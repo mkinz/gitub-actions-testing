@@ -16,6 +16,8 @@ jobs:
           echo "${{ github.token }}"
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Write file to pwd
+        run: echo $RANDOM > random.txt
       - name: List Files After Checkout
         run: |
           pwd
