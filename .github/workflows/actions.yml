@@ -2,17 +2,17 @@ name: Actions Workflow Testing
 
 on:
   push: 
-    branches:
-      - develop
+    # branches:
+    #   - develop
       # - 'feature/*' #regex match
       # - '!feature/featC'
-    tags:
-      - v1.*
-    paths:
-      - '**.js'
-      - '!filename.js'
-  # repository_dispatch:
-  #   types: [build]
+    # tags:
+    #   - v1.*
+    # paths:
+    #   - '**.js'
+    #   - '!filename.js'
+  repository_dispatch:
+    types: [build]
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *"
