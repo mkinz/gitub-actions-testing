@@ -1,7 +1,7 @@
 name: Actions Workflow Testing
 
 on:
-  push: 
+  # push: 
     # branches:
     #   - develop
       # - 'feature/*' #regex match
