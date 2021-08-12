@@ -1,11 +1,31 @@
 name: Actions Workflow Testing
 
-on: [push, pull_request]
+on:
+  push: 
+    branches:
+      - develop
+      # - 'feature/*' #regex match
+      # - '!feature/featC'
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
+      - '!filename.js'
+  # repository_dispatch:
+  #   types: [build]
+  # schedule:
+  #   - cron: "0/5 * * * *"
+  #   - cron: "0/6 * * * *"
+  #push:
+  # pull_request:
+  #   types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Payload
+        run: echo ${{github.event.client_payload.env}}
       - name: List Files Before Checkout
         run: |
           pwd
