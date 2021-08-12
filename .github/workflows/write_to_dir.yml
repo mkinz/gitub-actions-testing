@@ -1,24 +1,3 @@
 name: Write a File to Repo
 
 on: [push]
-
-jobs:
-  write-random-file-to-main:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: List contents of pwd
-      - run: |
-          pwd
-          ls -a
-      # - name: Checkout
-      # - uses: actions/checkout@v1
-      # - name: List contents after Checkout
-      # - run: |
-      #     pwd
-      #     ls -a
-      # - name: Write file to pwd
-      # - run: touch $RANDOM >> random.txt
-      # - name: Final list of all files
-      # - run: 
-      #     pwd
-      #     ls -a
