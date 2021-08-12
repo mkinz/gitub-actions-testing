@@ -12,7 +12,7 @@ on:
     #   - '**.js'
     #   - '!filename.js'
   repository_dispatch:
-    types: [build]
+    types: [on-demand-test]
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *"
