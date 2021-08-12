@@ -3,9 +3,9 @@ name: Actions Workflow Testing
 on:
   push: 
     branches:
-      - master
-      - 'feature/*' #regex match
-      - '!feature/featC'
+      - develop
+      # - 'feature/*' #regex match
+      # - '!feature/featC'
     tags:
       - v1.*
     paths:
