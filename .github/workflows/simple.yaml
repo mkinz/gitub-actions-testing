@@ -5,9 +5,11 @@ on: [pull_request]
 jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
+    timeout-minutes: 360 #github cancels job after this many minutes
     steps:
       - name: echo a string
         run: echo "Hello, world!"
+        continue-on-error: true #even if job fails, all subsequent jobs will run
       - name: multiline script
         run: |
           node -v
@@ -19,7 +21,7 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
-    needs: ["run-shell-command"]
+    needs: ["run-shell-command"] #runs job in sequence
     steps:
       - name: get directory in Powershell
         run: Get-Location
